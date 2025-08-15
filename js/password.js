@@ -137,8 +137,8 @@ function showPasswordModal() {
             // 正常的密码验证模式
             const title = passwordModal.querySelector('h2');
             const description = passwordModal.querySelector('p');
-            if (title) title.textContent = '访问验证';
-            if (description) description.textContent = '请输入密码继续访问';
+            if (title) title.textContent = '仅限受邀用户';
+            if (description) description.textContent = '陌生访客请勿停留';
             
             const form = passwordModal.querySelector('form');
             if (form) form.style.display = 'block';
