@@ -390,17 +390,6 @@
         }
     }
     </script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            fetch('https://zhanghongru.com/lab/say/')
-                .then(response => response.text())
-                .then(quote => {
-                    document.getElementById('quote').innerText = quote;
-                })
-                .catch(error => console.error('加载失败:', error));
-        });
-    </script>
     
     <!-- 引入纯 JS sha256（HTTP 下依然可用） -->
     <script src="libs/sha256.min.js"></script>
@@ -409,6 +398,7 @@
         window._jsSha256 = window.sha256;
     </script>
     <script src="js/config.js"></script>
+    <script src="js/say.js"></script>
     <script src="js/proxy-auth.js"></script>
     <script src="js/customer_site.js"></script>
     <script src="js/ui.js"></script>
