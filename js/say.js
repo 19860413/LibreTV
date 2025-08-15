@@ -1,5 +1,5 @@
-  document.addEventListener('DOMContentLoaded', () => {
-    const quotes = [
+document.addEventListener('DOMContentLoaded', () => {
+  const quotes = [
       '别人眉来又眼去，我只偷看你一眼。',
       '承蒙你出现，够我欢喜好几年。',
       '其实我很早就在等你醒来，只因怕错过你晨起时的惺忪可爱。',
@@ -259,11 +259,27 @@
       '239、有时候我希望你的一生能被拍成一部漫长的电影。然后让我比你晚出生一百年，一辈子只做一件事：独自坐在房间里，对着墙上的荧幕光影，用我的一生，把你的一生慢慢看完。（mysticphonk《Haunt U》）',
       '240、清晨打开窗户的第一件事，就是和你说声早安；午饭后收拾好碗筷后的第一件事，就是和你一起午休；夜晚时趁你睡熟时的第一件事，就是偷偷吻你一下。（Astronomyy《Things I,d Do for U》）',
       '241、愿所有的晚安都有回应。（丢火车《晚安》）'
-      
-    ];
-    
-    const pTag = document.querySelector('p.text-gray-500.text-sm.max-w-md');
+  ];
+
+  // 获取目标DOM元素
+  const pTag = document.querySelector('p.text-gray-500.text-sm.max-w-md');
+  
+  // 名言更新函数
+  function updateQuote() {
     if (pTag) {
-      pTag.textContent = quotes[Math.floor(Math.random() * quotes.length)];
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      pTag.textContent = quotes[randomIndex];
     }
+  }
+
+  // 初始显示
+  updateQuote();
+
+  // 设置定时器（每10秒更新一次）
+  const intervalId = setInterval(updateQuote, 10000);
+
+  // 页面卸载时清理定时器（避免内存泄漏）
+  window.addEventListener('beforeunload', () => {
+    clearInterval(intervalId);
   });
+});
