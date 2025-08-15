@@ -262,7 +262,7 @@
       
     ];
     
-    const pTag = document.querySelector('p.text-gray-500.text-sm.mt-2.text-center.md\\:text-left');
+    const pTag = document.querySelector('p.text-gray-500.text-sm.max-w-md');
     if (pTag) {
       pTag.textContent = quotes[Math.floor(Math.random() * quotes.length)];
     }
