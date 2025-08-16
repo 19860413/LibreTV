@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
   updateQuote();
 
   // 设置定时器（每10秒更新一次）
-  const intervalId = setInterval(updateQuote, 20000);
+  const intervalId = setInterval(updateQuote, 10000);
 
   // 页面卸载时清理定时器（避免内存泄漏）
   window.addEventListener('beforeunload', () => {
