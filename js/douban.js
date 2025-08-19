@@ -48,7 +48,7 @@ function saveUserTags() {
     }
 }
 
-let doubanMovieTvCurrentSwitch = 'movie';
+let doubanMovieTvCurrentSwitch = 'tv';
 let doubanCurrentTag = '热门';
 let doubanPageStart = 0;
 const doubanPageSize = 16; // 一次显示的项目数量
